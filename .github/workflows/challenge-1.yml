@@ -4,8 +4,8 @@ name: challenge-1
 on: push
 
 jobs:
-  ubuntu-job: ubuntu-latest
-    runs-on:
+  ubuntu-job: 
+    runs-on: ubuntu-latest
     steps:
     - run: date
   
@@ -16,7 +16,7 @@ jobs:
   
   
   macos-job:
-    runs-on:
+    runs-on: macos-latest
     steps:
     - run: date
   
