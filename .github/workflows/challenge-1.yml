@@ -1,0 +1,29 @@
+name: challenge-1
+
+
+on: push
+
+jobs:
+  ubuntu-job: ubuntu-latest
+    runs-on:
+    steps:
+    - run: date
+  
+  windows-job:
+    runs-on: windows-latest
+    steps:
+    - run: date
+  
+  
+  macos-job:
+    runs-on:
+    steps:
+    - run: date
+  
+  
+  dependency-job:
+  needs: [ubuntu-job, windows-job, macos-job]
+    runs-on: macos-latest
+    steps:
+    - run: date
+  
